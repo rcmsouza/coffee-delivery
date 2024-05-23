@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { typography } from '../../styles/typography'
 
 export const HeaderContainer = styled.header`
   display: flex;
@@ -37,10 +38,26 @@ export const Aside = styled.aside`
     align-items: center;
     padding: 0.5rem;
     background: ${({ theme }) => theme['yellow-100']};
+    color: ${({ theme }) => theme['yellow-800']};
     border-radius: 6px;
+    position: relative;
 
-    svg {
-      fill: ${({ theme }) => theme['yellow-800']};
+    span {
+      ${typography.fonts.textS};
+      font-weight: bold;
+      color: ${({ theme }) => theme.white};
+      background-color: ${({ theme }) => theme['yellow-800']};
+      border-radius: 50%;
+      width: 1.25rem;
+      height: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      transform: translate(50%, -50%);
     }
   }
 `

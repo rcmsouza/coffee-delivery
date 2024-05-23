@@ -14,7 +14,7 @@ export function QuantityInput({
 }: QuantityInputProps) {
   return (
     <Container>
-      <button disabled={quantity === 1} onClick={decreaseQuantity}>
+      <button disabled={quantity < 1} onClick={decreaseQuantity}>
         <Minus size={14} />
       </button>
       <span>{quantity ?? 1}</span>
